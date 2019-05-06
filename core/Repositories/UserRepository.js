@@ -7,7 +7,9 @@ const createUser = (userInfo, callback) => {
   newUser.save((err, user) => {
     return callback(err, {
       firstName: user.firstName,
+      middleInitial: user.middleInitial,
       lastName: user.lastName,
+      email: user.email,
       age: user.age,
       gender: user.gender,
       weight: user.weight,
@@ -22,7 +24,9 @@ const getAllUsers = callback => {
     return callback(err, users.map(user => {
       return {
         firstName: user.firstName,
+        middleInitial: user.middleInitial,
         lastName: user.lastName,
+        email: user.email,
         age: user.age,
         gender: user.gender,
         weight: user.weight,
