@@ -1,6 +1,6 @@
 # Run Logging App
 
-## Project setup
+## Project setup for development
 ```
 yarn install
 ```
