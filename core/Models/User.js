@@ -6,9 +6,16 @@ const UserSchema = new Schema({
     type: String,
     required: 'Must enter a first name'
   },
+  middleInitial: {
+    type: String
+  },
   lastName: {
     type: String,
     required: 'Must enter a last name'
+  },
+  email: {
+    type: String,
+    required: 'Must enter an email'
   },
   age: {
     type: Number,
