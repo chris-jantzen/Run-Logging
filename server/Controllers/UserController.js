@@ -37,7 +37,6 @@ const updateUser = (req, res, db) => {
   const user = userModel.VerifyUserModel(userId, req.body);
   userRepository.updateUser(userId, user, db, (err, result) => {
     if (err) throw err;
-    console.log(user);
     res
       .status(200)
       .send(
@@ -49,7 +48,12 @@ const updateUser = (req, res, db) => {
 };
 
 // Delete User
-const deleteUser = (req, res, db) => {};
+const deleteUser = (req, res, db) => {
+  userRepository.deleteUser(req.params.id, db, (err, result) => {
+    if (err) throw err;
+    res.status(200).send('User Deleted');
+  });
+};
 
 module.exports = {
   createUser,

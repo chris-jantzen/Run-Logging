@@ -36,7 +36,7 @@ const VerifyUserModel = (userId, body) => {
     height
   } = body;
   return {
-    UserID: userId.substring(1, userId.length - 1),
+    UserID: userId,
     firstName,
     middleInitial,
     lastName,
