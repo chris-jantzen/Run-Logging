@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "c1f6d65c-c4a8-41fa-a5bd-eea19a9a77d1",
+		"name": "vue-run-logging-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CheckHealth",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{domain}}/checkhealth",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"checkhealth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\": \"Chris\",\n\t\"middleInitial\": \"A\",\n\t\"lastName\": \"Jantzen\",\n\t\"email\": \"cjantzen22@gmail.com\",\n\t\"age\": 21,\n\t\"gender\": \"Male\",\n\t\"weight\": 145,\n\t\"height\": \"5'11\\\"\"\n}"
+				},
+				"url": {
+					"raw": "{{domain}}/user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{domain}}/user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{domain}}/user/'5cd0bf4fcc3de36118397e6a'",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"'5cd0bf4fcc3de36118397e6a'"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUserWithId",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\": \"Chris\",\n\t\"middleInitial\": \"A\",\n\t\"lastName\": \"Jantzen\",\n\t\"email\": \"cjantzen22@gmail.com\",\n\t\"age\": 21,\n\t\"gender\": \"Male\",\n\t\"weight\": 145,\n\t\"height\": \"5ft 11in\"\n}"
+				},
+				"url": {
+					"raw": "{{domain}}/user/774caf70-7390-11e9-b969-ede454d09366",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"774caf70-7390-11e9-b969-ede454d09366"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUserWithId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{domain}}/user/'6288ad00-7390-11e9-b969-ede454d09366'",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"'6288ad00-7390-11e9-b969-ede454d09366'"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
