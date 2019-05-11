@@ -14,13 +14,7 @@ const getUserById = (userId, db, getResult) => {
 };
 
 const updateUser = (userId, userData, db, getResult) => {
-  const updateString = `UserID='${userData.UserID}', firstName='${
-    userData.firstName
-  }', middleInitial='${userData.middleInitial}', lastName='${
-    userData.lastName
-  }', email='${userData.email}', age=${userData.age}, gender='${
-    userData.gender
-  }', weight=${userData.weight}, height='${userData.height}'`;
+  const updateString = buildUpdateString(userData);
   const sql = `UPDATE User SET ${updateString} WHERE UserID='${userId}'`;
   db.query(sql, (err, result) => getResult(err, result));
 };
@@ -28,6 +22,18 @@ const updateUser = (userId, userData, db, getResult) => {
 const deleteUser = (userId, db, getResult) => {
   const sql = `DELETE FROM User WHERE UserID=${userId}`;
   db.query(sql, (err, result) => getResult(err, result));
+};
+
+// Helper Functions
+const buildUpdateString = userData => {
+  let updateString = `UserID='${userData.UserID}', `;
+  updateString += `firstName='${userData.firstName}', `;
+  updateString += `middleInitial='${userData.middleInitial}', `;
+  updateString += `lastName='${userData.lastName}', `;
+  updateString += `email='${userData.email}', age=${userData.age}, `;
+  updateString += `gender='${userData.gender}', `;
+  updateString += `weight=${userData.weight}, height='${userData.height}'`;
+  return updateString;
 };
 
 module.exports = {
