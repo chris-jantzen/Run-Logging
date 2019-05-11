@@ -5,8 +5,7 @@
   "author": "Chris",
   "license": "MIT",
   "scripts": {
-    "mongo": "nodemon core/app.js",
-    "mysql": "nodemon server/app.js"
+    "dev": "nodemon server/app.js"
   },
   "dependencies": {
     "express": "^4.16.4",
