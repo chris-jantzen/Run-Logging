@@ -92,11 +92,26 @@ export default {
 .create-user {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: auto;
-  width: 50%;
+  width: 25%;
   background-color: lightgray;
   border-radius: 5px;
   padding: 10px;
+
+  .input-box {
+    justify-content: center;
+    align-content: center;
+    margin: 10px;
+
+    input {
+      padding: 5px 10px;
+      margin-left: 10px;
+    }
+
+    label {
+    }
+  }
 
   .submit {
     background-color: #303133;
@@ -108,18 +123,6 @@ export default {
       background-color: #ccc;
       cursor: pointer;
     }
-  }
-}
-
-.input-box {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin: 10px;
-
-  input {
-    padding: 5px 10px;
-    margin-left: 10px;
   }
 }
 
