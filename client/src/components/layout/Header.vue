@@ -2,8 +2,9 @@
   <header class="header">
     <h1>Run Logging</h1>
     <div>
-      <router-link to="/">Home</router-link>|&nbsp;
-      <router-link to="/about">About</router-link>
+      <router-link class="link-item" to="/">Home</router-link>
+      <span id="bar-char">|</span>&nbsp;
+      <router-link class="link-item" to="/about">About</router-link>
     </div>
   </header>
 </template>
@@ -14,26 +15,36 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .header {
   background: #333;
   color: #fff;
   text-align: center;
   padding: 10px;
-}
 
-.header h1 {
-  margin-bottom: 10px;
-}
+  h1 {
+    margin-bottom: 5px;
+    margin-top: 0px;
+    font-size: 3rem;
+  }
 
-.header a {
-  color: white;
-  padding-right: 5px;
-  text-decoration: none;
-}
+  a {
+    color: white;
+    padding-right: 5px;
+    text-decoration: none;
 
-.header a:hover {
-  color: #ccc;
-  cursor: pointer;
+    &:hover {
+      color: #ccc;
+      cursor: pointer;
+    }
+  }
+
+  .link-item {
+    font-size: 1.5rem;
+  }
+
+  #bar-char {
+    font-size: 1.5rem;
+  }
 }
 </style>

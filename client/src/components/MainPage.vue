@@ -9,43 +9,43 @@
         <label for="create-user">
           <span class="red">*</span>Email:
         </label>
-        <input type="text" id="create-user" v-model="email" placeholder="Email">
+        <input type="text" class="input-box" v-model="email" placeholder="Email">
       </div>
       <div class="input-box">
         <label for="create-user">
           <span class="red">*</span>First Name:
         </label>
-        <input type="text" id="create-user" v-model="firstName" placeholder="First Name">
+        <input type="text" class="input-box" v-model="firstName" placeholder="First Name">
       </div>
       <div class="input-box">
         <label for="create-user">Middle Initial:</label>
-        <input type="text" id="create-user" v-model="middleInitial" placeholder="Middle Initial">
+        <input type="text" class="input-box" v-model="middleInitial" placeholder="Middle Initial">
       </div>
       <div class="input-box">
         <label for="create-user">
           <span class="red">*</span>Last Name:
         </label>
-        <input type="text" id="create-user" v-model="lastName" placeholder="Last Name">
+        <input type="text" class="input-box" v-model="lastName" placeholder="Last Name">
       </div>
       <div class="input-box">
         <label for="create-user">
           <span class="red">*</span>Age:
         </label>
-        <input type="text" id="create-user" v-model="age" placeholder="Age">
+        <input type="text" class="input-box" v-model="age" placeholder="Age">
       </div>
       <div class="input-box">
         <label for="create-user">
           <span class="red">*</span>Gender:
         </label>
-        <input type="text" id="create-user" v-model="gender" placeholder="Gender">
+        <input type="text" class="input-box" v-model="gender" placeholder="Gender">
       </div>
       <div class="input-box">
         <label for="create-user">Weight:</label>
-        <input type="text" id="create-user" v-model="weight" placeholder="Weight">
+        <input type="text" class="input-box" v-model="weight" placeholder="Weight">
       </div>
       <div class="input-box">
         <label for="create-user">Height:</label>
-        <input type="text" id="create-user" v-model="height" placeholder="Height">
+        <input type="text" class="input-box" v-model="height" placeholder="Height">
       </div>
       <button v-on:click="addUser" class="submit">Create New User</button>
     </div>
@@ -88,40 +88,46 @@ export default {
 };
 </script>
 
-<style scoped>
-.submit {
-  background-color: #303133;
-  color: #fff;
-  padding: 5px 10px 5px 10px;
-  margin-top: 10px;
-}
-
-.submit:hover {
-  background-color: #ccc;
-  cursor: pointer;
-}
-
+<style lang="scss" scoped>
 .create-user {
+  display: flex;
+  flex-direction: column;
   margin: auto;
-  width: 25%;
+  width: 50%;
   background-color: lightgray;
   border-radius: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 10px;
+
+  .submit {
+    background-color: #303133;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    margin-top: 10px;
+
+    &:hover {
+      background-color: #ccc;
+      cursor: pointer;
+    }
+  }
 }
 
 .input-box {
-  display: grid;
-  grid-template-columns: 2fr 4fr;
+  display: flex;
+  justify-content: center;
+  align-content: center;
   margin: 10px;
-}
 
-.input-box input {
-  padding: 5px 10px;
-  margin-left: 10px;
+  input {
+    padding: 5px 10px;
+    margin-left: 10px;
+  }
 }
 
 .red {
   color: red;
+}
+
+h1 {
+  margin: 20px 0px;
 }
 </style>
