@@ -100,27 +100,38 @@ export default {
   padding: 10px;
 
   .input-box {
+    width: 100%;
+    display: flex;
     justify-content: center;
-    align-content: center;
-    margin: 10px;
+    align-items: center;
+    margin: 5px;
 
     input {
-      padding: 5px 10px;
-      margin-left: 10px;
+      flex: 2;
+      justify-content: flex-end;
+      padding: 10px 10px;
+      margin: 5px 0px 0px 10px;
+      border-radius: 1px;
     }
 
     label {
+      flex: 1;
+      margin-top: 5px;
     }
   }
 
   .submit {
     background-color: #303133;
     color: #fff;
-    padding: 5px 10px 5px 10px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 15px 10px 15px;
     margin-top: 10px;
 
     &:hover {
       background-color: #ccc;
+      color: #000;
       cursor: pointer;
     }
   }
