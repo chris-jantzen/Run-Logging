@@ -3,8 +3,10 @@
     <h1>Run Logging</h1>
     <div>
       <router-link class="link-item" to="/">Home</router-link>
-      <span id="bar-char">|</span>&nbsp;
+      <span class="bar-char">|</span>&nbsp;
       <router-link class="link-item" to="/about">About</router-link>
+      <span class="bar-char">|</span>
+      <router-link class="link-item" to="/sign-up">Sign Up</router-link>
     </div>
   </header>
 </template>
@@ -43,7 +45,7 @@ export default {
     font-size: 1.5rem;
   }
 
-  #bar-char {
+  .bar-char {
     font-size: 1.5rem;
   }
 }
