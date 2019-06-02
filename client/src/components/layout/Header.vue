@@ -5,7 +5,7 @@
       <router-link class="link-item" to="/">Home</router-link>
       <span class="bar-char">|</span>&nbsp;
       <router-link class="link-item" to="/about">About</router-link>
-      <span class="bar-char">|</span>
+      <span class="bar-char">|</span>&nbsp;
       <router-link class="link-item" to="/sign-up">Sign Up</router-link>
     </div>
   </header>
